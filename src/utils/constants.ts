@@ -1,4 +1,16 @@
-import { MenuInterface, PageInterface } from "../types/page";
+import {
+  MenuInterface,
+  PageInterface,
+  BusinessProcessInterface,
+} from "../types/page";
+import Icon1 from "../images/icon01.png";
+import Icon2 from "../images/icon02.png";
+import Icon3 from "../images/icon03.png";
+import Icon4 from "../images/icon04.png";
+import Icon5 from "../images/icon05.png";
+import Icon6 from "../images/icon06.png";
+import Icon7 from "../images/icon07.png";
+import Icon8 from "../images/icon08.png";
 
 export const emptyPageNames: PageInterface[] = [
   { title: "회사소개", path: "/sub0101" },
@@ -36,4 +48,18 @@ export const menus: MenuInterface[] = [
       { title: "자주 묻는 질문", path: "/sub0404" },
     ],
   },
+];
+
+export const processes1: BusinessProcessInterface[] = [
+  { title: "새벽배송", img: Icon1 },
+  { title: "보관", img: Icon2 },
+  { title: "출고", img: Icon3 },
+  { title: "화물주선", img: Icon4 },
+];
+
+export const processes2: BusinessProcessInterface[] = [
+  { title: "고객", img: Icon5 },
+  { title: "보험", img: Icon6 },
+  { title: "프랜차이즈", img: Icon7 },
+  { title: "식자재 유통", img: Icon8 },
 ];

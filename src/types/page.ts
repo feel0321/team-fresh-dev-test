@@ -6,3 +6,8 @@ export interface PageInterface {
 export interface MenuInterface extends PageInterface {
   subMenus?: PageInterface[];
 }
+
+export interface BusinessProcessInterface {
+  title: string;
+  img: string;
+}
