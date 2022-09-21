@@ -13,6 +13,7 @@ const HeaderContainer = styled.div<HeaderProps>`
   width: 100%;
   min-width: 1210px;
   background-color: ${({ isTop }) => !isTop && "rgba(2, 21, 48, 0.9)"};
+  z-index: 100;
 `;
 
 const CenterDiv = styled.div`
