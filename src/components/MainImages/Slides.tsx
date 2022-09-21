@@ -1,15 +1,45 @@
 import React from "react";
 import styled from "styled-components";
 import useSetTimeout from "../../hooks/useSetTimeout";
+import MainImage1 from "../../images/main_images01.jpg";
+import MainImage2 from "../../images/main_images02.jpg";
+import MainImage3 from "../../images/main_images03.jpg";
 
 const SlidesContainer = styled.div`
   min-width: 1150px;
   max-width: 2000px;
   height: 100vh;
-  /* position: relative; */
+  position: relative;
   /* text-align: center; */
+  overflow: hidden;
+`;
 
-  border: solid black 1px;
+interface SlideProps {
+  selectedIndex: number;
+}
+
+const Slide = styled.div<SlideProps>`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: ${({ selectedIndex }) =>
+    selectedIndex === 0 ? 0 : selectedIndex === 1 ? "-100%" : "-200%"};
+  top: 0;
+  transition: left 0.5s ease;
+`;
+
+interface SlideItemProps {
+  image: string;
+}
+
+const SlideItem = styled.div<SlideItemProps>`
+  background: ${({ image }) =>
+    `url(http://localhost:3000${image}) no-repeat 50% 50%`};
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
 `;
 
 const Ul = styled.ul`
@@ -44,13 +74,19 @@ const A = styled.a<AProps>`
   cursor: pointer;
 `;
 
+const slideImages = [MainImage1, MainImage2, MainImage3];
 const menus = [0, 1, 2];
 
 const Slides: React.FC = () => {
   const [idx, setCount] = useSetTimeout(3000);
 
   return (
-    <SlidesContainer id="slides1">
+    <SlidesContainer id="slides1" className="sliders">
+      <Slide className="slidesjs-container" selectedIndex={idx}>
+        {slideImages.map((image, index) => (
+          <SlideItem key={index} className="slide_contents" image={image} />
+        ))}
+      </Slide>
       <Ul className="slidesjs-pagination">
         {menus.map((menu, index) => (
           <Li key={index} onClick={() => setCount(index)}>

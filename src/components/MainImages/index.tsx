@@ -15,7 +15,7 @@ const MainImagesText = styled.div`
   top: 50%;
   left: 50%;
   /* text-align: left; */
-  /* z-index: 20; */
+  z-index: 20;
   margin-left: -575px;
   margin-top: -150px;
 `;
