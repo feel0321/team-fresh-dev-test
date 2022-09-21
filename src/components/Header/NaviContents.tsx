@@ -13,12 +13,28 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
+  position: relative;
   margin: 0 20px;
   list-style: none;
   cursor: pointer;
 
   &:last-child {
     margin: 0 0 0 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.1s ease;
+  }
+
+  &:hover&::after {
+    width: 100%;
   }
 `;
 
