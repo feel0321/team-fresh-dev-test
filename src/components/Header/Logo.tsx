@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import LogoImage from "../../images/logo_w.png";
 
-const Logo = styled.div`
+const LogoContainer = styled.div`
   margin: 20px 0;
 `;
 
@@ -11,14 +11,14 @@ const Img = styled.img`
   width: 110px;
 `;
 
-const LogoComponent: React.FC = () => {
+const Logo: React.FC = () => {
   return (
-    <Logo className="logo">
+    <LogoContainer className="logo">
       <Link to="/">
         <Img src={LogoImage} />
       </Link>
-    </Logo>
+    </LogoContainer>
   );
 };
 
-export default LogoComponent;
+export default Logo;

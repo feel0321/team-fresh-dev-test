@@ -4,7 +4,7 @@ import SubMenu from "./SubMenu";
 import { Link } from "react-router-dom";
 import { menus } from "../../utils/constants";
 
-const NaviContents = styled.div`
+const NaviContentsContainer = styled.div`
   margin: 13px 0 0 0;
   height: 100%;
 `;
@@ -56,9 +56,9 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const NaviContentsComponent: React.FC = () => {
+const NaviContents: React.FC = () => {
   return (
-    <NaviContents className="navicontents">
+    <NaviContentsContainer className="navicontents">
       <Ul>
         {menus.map(({ title, path, subMenus }, index) => (
           <Li key={index}>
@@ -67,8 +67,8 @@ const NaviContentsComponent: React.FC = () => {
           </Li>
         ))}
       </Ul>
-    </NaviContents>
+    </NaviContentsContainer>
   );
 };
 
-export default NaviContentsComponent;
+export default NaviContents;

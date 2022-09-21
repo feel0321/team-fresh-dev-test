@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const MainPages = styled.div`
+const MainImagesContainer = styled.div`
   position: relative;
   width: 100%;
   min-width: 1210px;
@@ -36,9 +36,9 @@ const MainImagesContent = styled.div`
   color: white;
 `;
 
-const MainImagesComponent: React.FC = () => {
+const MainImages: React.FC = () => {
   return (
-    <MainPages className="main_images">
+    <MainImagesContainer className="main_images">
       <MainImagesText className="main_images_text">
         <MainImagesTitleK className="main_images_title_k">
           대한민국 No.1
@@ -49,8 +49,8 @@ const MainImagesComponent: React.FC = () => {
           팀프레시는 신선함을 이어 풍요로운 세상을 만듭니다
         </MainImagesContent>
       </MainImagesText>
-    </MainPages>
+    </MainImagesContainer>
   );
 };
 
-export default MainImagesComponent;
+export default MainImages;

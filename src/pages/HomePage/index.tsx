@@ -1,8 +1,8 @@
 import React from "react";
-import MainImagesComponent from "../../components/MainImages";
+import MainImages from "../../components/MainImages";
 
 const HomePage: React.FC = () => {
-  return <MainImagesComponent />;
+  return <MainImages />;
 };
 
 export default HomePage;

@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import LogoComponent from "./Logo";
-import NaviContentsComponent from "./NaviContents";
+import Logo from "./Logo";
+import NaviContents from "./NaviContents";
 import useScroll from "../../hooks/useScroll";
 
 interface HeaderProps {
   isTop: boolean;
 }
 
-const Header = styled.div<HeaderProps>`
+const HeaderContainer = styled.div<HeaderProps>`
   position: fixed;
   width: 100%;
   min-width: 1210px;
@@ -24,17 +24,17 @@ const CenterDiv = styled.div`
   justify-content: space-between;
 `;
 
-const HeaderComponent: React.FC = () => {
+const Header: React.FC = () => {
   const isTop = useScroll();
 
   return (
-    <Header className="header" isTop={isTop}>
+    <HeaderContainer className="header" isTop={isTop}>
       <CenterDiv className="centerdiv">
-        <LogoComponent />
-        <NaviContentsComponent />
+        <Logo />
+        <NaviContents />
       </CenterDiv>
-    </Header>
+    </HeaderContainer>
   );
 };
 
-export default HeaderComponent;
+export default Header;
