@@ -13,7 +13,7 @@
   - 슬라이드
     - 자동으로 넘어감
     - 특정 슬라이드로 이동하는 추가 조작 가능
-- [ ] main_introduce
+- [x] main_introduce
   - 글씨
 - [ ] main_business
   - 글씨
