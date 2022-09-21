@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SubMenu from "./SubMenu";
 
 const NaviContents = styled.div`
   margin: 13px 0 0 0;
@@ -33,8 +34,13 @@ const Li = styled.li`
     transition: width 0.1s ease;
   }
 
-  &:hover&::after {
-    width: 100%;
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+    div {
+      display: block;
+    }
   }
 `;
 
@@ -47,15 +53,24 @@ const A = styled.a`
   color: white;
 `;
 
-const menus = ["회사소개", "서비스소개", "인재채용", "고객지원"];
+const menus = [
+  { title: "회사소개" },
+  { title: "서비스소개", subMenus: ["물류", "유통", "프랜차이즈", "보험"] },
+  { title: "인재채용" },
+  {
+    title: "고객지원",
+    subMenus: ["공지사항", "팀프뉴스", "문의하기", "자주 묻는 질문"],
+  },
+];
 
 const NaviContentsComponent: React.FC = () => {
   return (
     <NaviContents className="navicontents">
       <Ul>
-        {menus.map((menu, index) => (
+        {menus.map(({ title, subMenus }, index) => (
           <Li key={index}>
-            <A>{menu}</A>
+            <A>{title}</A>
+            {subMenus !== undefined && <SubMenu menus={subMenus} />}
           </Li>
         ))}
       </Ul>
