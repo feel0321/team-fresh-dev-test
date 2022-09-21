@@ -14,7 +14,6 @@ const CenterDiv = styled.div`
   padding: 0 30px;
   margin: 0 auto;
   box-sizing: border-box;
-
   display: flex;
   justify-content: space-between;
 `;

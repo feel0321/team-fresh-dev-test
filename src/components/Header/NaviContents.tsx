@@ -12,19 +12,19 @@ const Ul = styled.ul`
   display: flex;
 `;
 
-interface Props {
-  isLast: boolean;
-}
-
-const Li = styled.li<Props>`
-  margin: ${({ isLast }) => (isLast ? "0 0 0 20px" : "0 20px")};
+const Li = styled.li`
+  margin: 0 20px;
   list-style: none;
   cursor: pointer;
+
+  &:last-child {
+    margin: 0 0 0 20px;
+  }
 `;
 
 const A = styled.a`
-  /* font-family: Pretendard; */
-  /* font-weight: 300; */
+  font-family: Pretendard;
+  font-weight: 500;
   font-size: 18px;
   line-height: 30px;
   padding: 5px 0;
@@ -38,7 +38,7 @@ const NaviContentsComponent: React.FC = () => {
     <NaviContents className="navicontents">
       <Ul>
         {menus.map((menu, index) => (
-          <Li key={index} isLast={index === menus.length - 1}>
+          <Li key={index}>
             <A>{menu}</A>
           </Li>
         ))}
