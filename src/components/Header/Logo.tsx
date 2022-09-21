@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import LogoImage from "../../images/logo_w.png";
 
@@ -13,9 +14,9 @@ const Img = styled.img`
 const LogoComponent: React.FC = () => {
   return (
     <Logo className="logo">
-      <a href="https://www.teamfresh.kr/php/main.htm">
+      <Link to="/">
         <Img src={LogoImage} />
-      </a>
+      </Link>
     </Logo>
   );
 };

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { PageInterface } from "../../types/page";
+import { useNavigate } from "react-router-dom";
 
 const Div = styled.div`
   position: absolute;
@@ -35,15 +37,19 @@ const Li = styled.li`
 `;
 
 interface SubMenuProps {
-  menus: string[];
+  menus: PageInterface[];
 }
 
 const SubMenu: React.FC<SubMenuProps> = ({ menus }) => {
+  const navigate = useNavigate();
+
   return (
     <Div>
       <Ul>
-        {menus.map((menu, index) => (
-          <Li key={index}>{menu}</Li>
+        {menus.map(({ title, path }, index) => (
+          <Li key={index} onClick={() => navigate(path)}>
+            {title}
+          </Li>
         ))}
       </Ul>
     </Div>

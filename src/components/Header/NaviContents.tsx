@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import SubMenu from "./SubMenu";
+import { Link } from "react-router-dom";
+import { menus } from "../../utils/constants";
 
 const NaviContents = styled.div`
   margin: 13px 0 0 0;
@@ -44,32 +46,23 @@ const Li = styled.li`
   }
 `;
 
-const A = styled.a`
+const StyledLink = styled(Link)`
   font-family: Pretendard;
   font-weight: 500;
   font-size: 18px;
   line-height: 30px;
   padding: 5px 0;
   color: white;
+  text-decoration: none;
 `;
-
-const menus = [
-  { title: "회사소개" },
-  { title: "서비스소개", subMenus: ["물류", "유통", "프랜차이즈", "보험"] },
-  { title: "인재채용" },
-  {
-    title: "고객지원",
-    subMenus: ["공지사항", "팀프뉴스", "문의하기", "자주 묻는 질문"],
-  },
-];
 
 const NaviContentsComponent: React.FC = () => {
   return (
     <NaviContents className="navicontents">
       <Ul>
-        {menus.map(({ title, subMenus }, index) => (
+        {menus.map(({ title, path, subMenus }, index) => (
           <Li key={index}>
-            <A>{title}</A>
+            <StyledLink to={path}>{title}</StyledLink>
             {subMenus !== undefined && <SubMenu menus={subMenus} />}
           </Li>
         ))}
