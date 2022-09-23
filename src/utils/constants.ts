@@ -15,6 +15,10 @@ import MainBusinessImg1 from "../images/main_business_img01.jpg";
 import MainBusinessImg2 from "../images/main_business_img02.jpg";
 import MainBusinessImg3 from "../images/main_business_img03.jpg";
 import MainBusinessImg4 from "../images/main_business_img04.jpg";
+import MainPointImg1 from "../images/main_pointimg01.jpg";
+import MainPointImg2 from "../images/main_pointimg02.jpg";
+import MainPointImg3 from "../images/main_pointimg03.jpg";
+import MainPointImg4 from "../images/main_pointimg04.jpg";
 
 export const emptyPageNames: PageInterface[] = [
   { title: "회사소개", path: "/sub0101" },
@@ -108,5 +112,35 @@ export const services: ServiceInterface[] = [
     comment:
       "기업 전문 보험 GA와 만나/팀프인슈어런스가 탄생했습니다./기업 맞춤형, 최적의 보험 상품을 추천받아보세요.",
     img: MainBusinessImg4,
+  },
+];
+
+interface MainPointsInterface {
+  title: string;
+  comment: string;
+  img: string;
+}
+
+export const mainPoints: MainPointsInterface[] = [
+  {
+    title: "특허 보유 TMS",
+    comment:
+      "새벽배송 현황 추적에 최적화된 배차 및 고객 주문관리 시스템/*TMS : Transportation Management System",
+    img: MainPointImg1,
+  },
+  {
+    title: "국내 1위 새벽배송",
+    comment: "대한민국 1위 안정된 새벽배송망 구축",
+    img: MainPointImg2,
+  },
+  {
+    title: "24시간 관제",
+    comment: "24시간 현장 관제를 통해 상품을 안전하게 배송 완료",
+    img: MainPointImg3,
+  },
+  {
+    title: "라이선스 보유 차량망",
+    comment: "합법적으로 허가 받은 차량만을 섭외해 운영",
+    img: MainPointImg4,
   },
 ];
