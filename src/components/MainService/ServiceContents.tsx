@@ -39,6 +39,7 @@ const ServiceLink = styled.div`
 
 const ServiceImg = styled.div`
   width: 55%;
+  flex-shrink: 0;
 `;
 
 const Img = styled.img`
