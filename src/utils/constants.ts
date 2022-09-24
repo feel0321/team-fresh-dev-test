@@ -97,9 +97,9 @@ export const services: ServiceInterface[] = [
   {
     icon: Icon4,
     title: "유통",
-    content: "식자재 제안,/업장 운영 형태에 맞는 최적의 형태로",
+    content: "식자재 제안,/업장 운영 형태에 맞는/최적의 형태로",
     comment:
-      "주기적인 단가 관리 시스템을 통해 합리적인 가격의 상품을 제공하고, 자체 물류 역량으로 상품을 안정적으로 공급하고 있습니다.",
+      "주기적인 단가 관리 시스템을 통해/합리적인 가격의 상품을 제공하고,/자체 물류 역량으로 상품을 안정적으로 공급하고 있습니다.",
     img: MainBusinessImg2,
   },
   {
@@ -113,7 +113,7 @@ export const services: ServiceInterface[] = [
   {
     icon: Icon7,
     title: "보험",
-    content: "기업 대상 전문 보험,/상해보험부터 재산종합보험까지 똑똑하게",
+    content: "기업 대상 전문 보험,/상해보험부터 재산종합보험까지/똑똑하게",
     comment:
       "기업 전문 보험 GA와 만나/팀프인슈어런스가 탄생했습니다./기업 맞춤형, 최적의 보험 상품을 추천받아보세요.",
     img: MainBusinessImg4,
