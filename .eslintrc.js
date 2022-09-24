@@ -20,5 +20,7 @@ module.exports = {
     "prettier/prettier": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "no-console": "warn",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/promise-function-async": "off",
   },
 };
