@@ -33,7 +33,7 @@ interface SlideItemProps {
 
 const SlideItem = styled.div<SlideItemProps>`
   background: ${({ image }) =>
-    `url(http://localhost:3000${image}) no-repeat 50% 50%`};
+    `url(http://localhost:17481${image}) no-repeat 50% 50%`};
   background-size: cover;
   width: 100%;
   height: 100%;

@@ -95,7 +95,7 @@ interface LinkImgProps {
 
 const LinkImg = styled.div<LinkImgProps>`
   background: ${({ img }) =>
-    `url(http://localhost:3000${img}) no-repeat center`};
+    `url(http://localhost:17481${img}) no-repeat center`};
   background-size: cover;
   width: 100%;
   height: 100%;

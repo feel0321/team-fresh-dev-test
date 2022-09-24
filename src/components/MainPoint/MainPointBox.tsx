@@ -68,7 +68,7 @@ const PointImg = styled.div<PointImgProps>`
   height: 100%;
   opacity: ${({ isSelected }) => (isSelected ? 1 : 0.3)};
   background: ${({ img }) =>
-    img !== "" && `url(http://localhost:3000${img}) no-repeat center`};
+    img !== "" && `url(http://localhost:17481${img}) no-repeat center`};
 `;
 
 const MainPointBox: React.FC = () => {
