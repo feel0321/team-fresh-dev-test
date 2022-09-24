@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import ArrowIcon from "../../images/arrowicon.png";
+import { ArrowIcon } from "../../images";
 import { services } from "../../utils/constants";
 
 const ServiceContentsContainer = styled.div`

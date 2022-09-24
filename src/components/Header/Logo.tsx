@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import LogoImage from "../../images/logo_w.png";
+import { LogoImage } from "../../images";
 
 const LogoContainer = styled.div`
   margin: 20px 0;

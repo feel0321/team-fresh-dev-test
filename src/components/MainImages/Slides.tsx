@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import useSetTimeout from "../../hooks/useSetTimeout";
-import MainImage1 from "../../images/main_images01.jpg";
-import MainImage2 from "../../images/main_images02.jpg";
-import MainImage3 from "../../images/main_images03.jpg";
+import { MainImage1, MainImage2, MainImage3 } from "../../images";
 
 const SlidesContainer = styled.div`
   min-width: 1150px;

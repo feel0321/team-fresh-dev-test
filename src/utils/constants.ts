@@ -3,22 +3,24 @@ import type {
   PageInterface,
   BusinessProcessInterface,
 } from "../types/page";
-import Icon1 from "../images/icon01.png";
-import Icon2 from "../images/icon02.png";
-import Icon3 from "../images/icon03.png";
-import Icon4 from "../images/icon04.png";
-import Icon5 from "../images/icon05.png";
-import Icon6 from "../images/icon06.png";
-import Icon7 from "../images/icon07.png";
-import Icon8 from "../images/icon08.png";
-import MainBusinessImg1 from "../images/main_business_img01.jpg";
-import MainBusinessImg2 from "../images/main_business_img02.jpg";
-import MainBusinessImg3 from "../images/main_business_img03.jpg";
-import MainBusinessImg4 from "../images/main_business_img04.jpg";
-import MainPointImg1 from "../images/main_pointimg01.jpg";
-import MainPointImg2 from "../images/main_pointimg02.jpg";
-import MainPointImg3 from "../images/main_pointimg03.jpg";
-import MainPointImg4 from "../images/main_pointimg04.jpg";
+import {
+  Icon1,
+  Icon2,
+  Icon3,
+  Icon4,
+  Icon5,
+  Icon6,
+  Icon7,
+  Icon8,
+  MainBusinessImg1,
+  MainBusinessImg2,
+  MainBusinessImg3,
+  MainBusinessImg4,
+  MainPointImg1,
+  MainPointImg2,
+  MainPointImg3,
+  MainPointImg4,
+} from "../images";
 
 export const emptyPageNames: PageInterface[] = [
   { title: "회사소개", path: "/sub0101" },
