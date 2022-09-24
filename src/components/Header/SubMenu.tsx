@@ -33,6 +33,7 @@ const Li = styled.li`
   font-size: 14px;
   cursor: pointer;
   line-height: 40px;
+  background-color: rgba(2, 21, 48, 0.9);
 `;
 
 interface SubMenuProps {
