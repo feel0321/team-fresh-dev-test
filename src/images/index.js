@@ -1,4 +1,5 @@
-import ArrowIcon from ".//arrowicon.png";
+import ArrowIcon from "./arrowicon.png";
+import ArrowIcon2 from "./arrowicon2.png";
 import Icon1 from "./icon01.png";
 import Icon2 from "./icon02.png";
 import Icon3 from "./icon03.png";
@@ -19,9 +20,13 @@ import MainPointImg1 from "./main_pointimg01.jpg";
 import MainPointImg2 from "./main_pointimg02.jpg";
 import MainPointImg3 from "./main_pointimg03.jpg";
 import MainPointImg4 from "./main_pointimg04.jpg";
+import MainLinkImg1 from "./main_linkimg01.jpg";
+import MainLinkImg2 from "./main_linkimg02.jpg";
+import MainLinkImg3 from "./main_linkimg03.jpg";
 
 export {
   ArrowIcon,
+  ArrowIcon2,
   Icon1,
   Icon2,
   Icon3,
@@ -42,4 +47,7 @@ export {
   MainPointImg2,
   MainPointImg3,
   MainPointImg4,
+  MainLinkImg1,
+  MainLinkImg2,
+  MainLinkImg3,
 };

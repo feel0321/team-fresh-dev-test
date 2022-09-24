@@ -20,6 +20,9 @@ import {
   MainPointImg2,
   MainPointImg3,
   MainPointImg4,
+  MainLinkImg1,
+  MainLinkImg2,
+  MainLinkImg3,
 } from "../images";
 
 export const emptyPageNames: PageInterface[] = [
@@ -145,4 +148,16 @@ export const mainPoints: MainPointsInterface[] = [
     comment: "합법적으로 허가 받은 차량만을 섭외해 운영",
     img: MainPointImg4,
   },
+];
+
+interface MainLinkInterface {
+  title: string;
+  img: string;
+  path: string;
+}
+
+export const mainLinks: MainLinkInterface[] = [
+  { title: "News", img: MainLinkImg1, path: "/sub0402" },
+  { title: "Recruit", img: MainLinkImg2, path: "/sub0301" },
+  { title: "Timf Story", img: MainLinkImg3, path: "/sub0402" },
 ];
