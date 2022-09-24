@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { SearchResultInterface } from "../../types/page";
 import Container from "./Container";
 import Notice from "./Notice";
 
@@ -60,7 +61,11 @@ const Hr = styled.hr`
   border: 0;
 `;
 
-const SearchLocation: React.FC = () => {
+interface SearchLocationProps {
+  searchResult: SearchResultInterface;
+}
+
+const SearchLocation: React.FC<SearchLocationProps> = ({ searchResult }) => {
   return (
     <Wrapper className="wrapper">
       <Header className="header">
@@ -75,7 +80,7 @@ const SearchLocation: React.FC = () => {
         <H4>다시 주소 검색하기</H4>
         <Hr />
       </Header>
-      <Container />
+      <Container searchResult={searchResult} />
       <Notice />
     </Wrapper>
   );

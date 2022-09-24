@@ -11,3 +11,8 @@ export interface BusinessProcessInterface {
   title: string;
   img: string;
 }
+
+export interface SearchResultInterface {
+  zoneCode: string;
+  roadAddress: string;
+}

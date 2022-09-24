@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { SearchResultInterface } from "../../types/page";
 
 const ContainerDiv = styled.div`
   width: 420px;
@@ -68,12 +69,29 @@ const A = styled.a`
   font-size: 14px;
 `;
 
-const Container: React.FC = () => {
+interface ContainerProps {
+  searchResult: SearchResultInterface;
+}
+const Container: React.FC<ContainerProps> = ({ searchResult }) => {
+  const { zoneCode, roadAddress } = searchResult;
+
   return (
     <ContainerDiv className="container">
-      <ZoneCodeInput className="zipcodebox" readOnly />
-      <RoadAddressInput className="addressbox" readOnly />
-      <Input />
+      <ZoneCodeInput
+        className="zipcodebox"
+        id="zonecode"
+        name="zonecode"
+        readOnly
+        value={zoneCode}
+      />
+      <RoadAddressInput
+        className="addressbox"
+        id="roadAddress"
+        name="roadAddress"
+        readOnly
+        value={roadAddress}
+      />
+      <Input placeholder="나머지 주소를 입력해주세요." />
       <br />
       <A className="center">주소입력</A>
     </ContainerDiv>
