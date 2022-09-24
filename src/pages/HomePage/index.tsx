@@ -1,4 +1,5 @@
 import React from "react";
+import Bottom from "../../components/Bottom";
 import MainBusiness from "../../components/MainBusiness";
 import MainImages from "../../components/MainImages";
 import MainIntroduce from "../../components/MainIntroduce";
@@ -15,6 +16,7 @@ const HomePage: React.FC = () => {
       <MainService />
       <MainPoint />
       <MainLink />
+      <Bottom />
     </>
   );
 };

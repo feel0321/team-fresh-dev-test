@@ -79,8 +79,6 @@ const BusinessProcess = styled.div`
 
 const Ul = styled.ul`
   display: flex;
-  margin: 0;
-  padding: 0;
 `;
 
 const Li = styled.li`
@@ -92,7 +90,6 @@ const Li = styled.li`
   font-size: 20px;
   line-height: 25px;
   color: #fff;
-  list-style: none;
 `;
 
 const Img = styled.img`

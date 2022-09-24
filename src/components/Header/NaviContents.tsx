@@ -10,15 +10,12 @@ const NaviContentsContainer = styled.div`
 `;
 
 const Ul = styled.ul`
-  padding: 0;
-  margin: 0;
   display: flex;
 `;
 
 const Li = styled.li`
   position: relative;
   margin: 0 20px;
-  list-style: none;
   cursor: pointer;
 
   &:last-child {

@@ -41,8 +41,6 @@ const SlideItem = styled.div<SlideItemProps>`
 `;
 
 const Ul = styled.ul`
-  padding: 0;
-  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -55,7 +53,6 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   margin: 0 3px;
-  list-style: none;
 `;
 
 interface AProps {

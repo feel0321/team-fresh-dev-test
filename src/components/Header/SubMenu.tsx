@@ -32,7 +32,6 @@ const Li = styled.li`
   color: white;
   font-size: 14px;
   cursor: pointer;
-  list-style: none;
   line-height: 40px;
 `;
 

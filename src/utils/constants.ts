@@ -161,3 +161,16 @@ export const mainLinks: MainLinkInterface[] = [
   { title: "Recruit", img: MainLinkImg2, path: "/sub0301" },
   { title: "Timf Story", img: MainLinkImg3, path: "/sub0402" },
 ];
+
+export const bottoms = ["개인정보 처리방침", "위치기반 서비스 이용약관"];
+
+export const companies = [
+  "(주)팀프레시",
+  "사업자번호 561-88-01138",
+  "대표 이성일",
+  "서울 강남구 봉은사로 37길 7-9 글래드큐브빌딩",
+  "전화 02-423-0525",
+  "팩스 02-3432-0525",
+  "메일 info@timf.co.kr",
+  "영업 및 제휴 문의 sales@timf.co.kr",
+];

@@ -16,7 +16,6 @@ const ServiceTabBtnContainer = styled.div`
 
 const Ul = styled.ul`
   width: 100%;
-  padding: 0;
   margin: 0 auto;
   display: flex;
 `;
@@ -37,7 +36,6 @@ const Li = styled.li<LiProps>`
   cursor: pointer;
   padding: 75px 0 15px;
   box-sizing: border-box;
-  list-style: none;
   background-color: ${({ isSelected }) => isSelected && "#02204b"};
 
   & img {
