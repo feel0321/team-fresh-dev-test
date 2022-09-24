@@ -61,6 +61,7 @@ export const menus: MenuInterface[] = [
       { title: "자주 묻는 질문", path: "/sub0404" },
     ],
   },
+  { title: "배송지역검색", path: "/searchLocation" },
 ];
 
 export const processes1: BusinessProcessInterface[] = [

@@ -1,18 +1,22 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/HomePage";
-import Empty from "./pages/EmptyPage";
-import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import EmptyPage from "./pages/EmptyPage";
 import { emptyPageNames } from "./utils/constants";
+import SearchLocationPage from "./pages/SearchLocationPage";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/searchLocation" element={<SearchLocationPage />} />
         {emptyPageNames.map(({ title, path }, index) => (
-          <Route key={index} path={path} element={<Empty title={title} />} />
+          <Route
+            key={index}
+            path={path}
+            element={<EmptyPage title={title} />}
+          />
         ))}
       </Routes>
     </div>
