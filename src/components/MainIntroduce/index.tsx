@@ -11,6 +11,7 @@ const MainIntroduceContainer = styled(MainSection)`
   font-weight: 600;
   font-size: 30px;
   line-height: 35px;
+  min-width: 1210px;
 `;
 
 const MainIntroduce: React.FC = () => {

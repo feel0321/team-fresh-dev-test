@@ -4,7 +4,7 @@ import { MainSection, MainTitle } from "../Common";
 import BusinessContents from "./BusinessContents";
 
 const MainBusinessContainer = styled(MainSection)`
-  width: 100%;
+  min-width: 1210px;
   height: 1050px;
   padding: 0;
   background: #000;
