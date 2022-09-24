@@ -2,19 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import BottomTop from "./BottomTop";
 import { companies } from "../../utils/constants";
+import { CenterDiv } from "../Common";
 
 const BottomContainer = styled.div`
   min-width: 1210px;
   background: #191919;
   padding: 50px 0;
   margin: 0;
-`;
-
-const CenterDiv = styled.div`
-  width: 1210px;
-  margin: 0 auto;
-  padding: 0 30px;
-  box-sizing: border-box;
 `;
 
 const CompanyInfo = styled.div`
@@ -40,7 +34,7 @@ const CompanyInfoLi = styled.li`
 const Bottom: React.FC = () => {
   return (
     <BottomContainer className="bottom">
-      <CenterDiv className="CenterDiv">
+      <CenterDiv>
         <BottomTop />
         <CompanyInfo className="company_info">
           <ul>

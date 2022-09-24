@@ -1,28 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { MainSection, MainTitle } from "../Common";
 import BusinessContents from "./BusinessContents";
 
-const MainBusinessContainer = styled.div`
+const MainBusinessContainer = styled(MainSection)`
   width: 100%;
   height: 1050px;
   padding: 0;
   background: #000;
   /* overflow: hidden; */
-  position: relative;
 `;
 
-const MainTitle = styled.div`
+const CustomMainTitle = styled(MainTitle)`
   position: absolute;
   top: 150px;
   left: 0;
   width: 100%;
   color: #fff;
   z-index: 2;
-  font-family: Pretendard;
-  text-align: center;
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 45px;
 `;
 
 const Span = styled.span`
@@ -32,12 +27,12 @@ const Span = styled.span`
 
 const MainBusiness: React.FC = () => {
   return (
-    <MainBusinessContainer className="main_section main_business">
-      <MainTitle className="main_title">
+    <MainBusinessContainer className="main_business">
+      <CustomMainTitle>
         <Span>콜드체인 원스톱 솔루션으로 한눈에</Span>
         <br />
         신선상품의 유통과정
-      </MainTitle>
+      </CustomMainTitle>
       <BusinessContents />
     </MainBusinessContainer>
   );

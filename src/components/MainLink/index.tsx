@@ -3,21 +3,15 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { ArrowIcon2 } from "../../images";
 import { mainLinks } from "../../utils/constants";
+import { CenterDiv, MainSection } from "../Common";
 
-const MainLinkContainer = styled.div`
-  position: relative;
-  padding: 150px 0;
-
+const MainLinkContainer = styled(MainSection)`
   & * {
     transition: all 0.2s ease;
   }
 `;
 
-const Relattive = styled.div`
-  width: 1210px;
-  margin: 0 auto;
-  padding: 0 30px;
-  box-sizing: border-box;
+const Relattive = styled(CenterDiv)`
   display: flex;
 `;
 
@@ -112,8 +106,8 @@ const MainLink: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <MainLinkContainer className="main_section main_link">
-      <Relattive className="centerdiv relattive">
+    <MainLinkContainer className="main_link">
+      <Relattive className="relattive">
         {mainLinks.map(({ title, img, path }, index) => (
           <LinkContent
             key={index}

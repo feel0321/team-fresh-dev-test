@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import NaviContents from "./NaviContents";
 import useScroll from "../../hooks/useScroll";
+import { CenterDiv } from "../Common";
 
 interface HeaderProps {
   isTop: boolean;
@@ -16,11 +17,7 @@ const HeaderContainer = styled.div<HeaderProps>`
   z-index: 100;
 `;
 
-const CenterDiv = styled.div`
-  width: 1210px;
-  padding: 0 30px;
-  margin: 0 auto;
-  box-sizing: border-box;
+const CustomCenterDiv = styled(CenterDiv)`
   display: flex;
   justify-content: space-between;
 `;
@@ -30,10 +27,10 @@ const Header: React.FC = () => {
 
   return (
     <HeaderContainer className="header" isTop={isTop}>
-      <CenterDiv className="centerdiv">
+      <CustomCenterDiv>
         <Logo />
         <NaviContents />
-      </CenterDiv>
+      </CustomCenterDiv>
     </HeaderContainer>
   );
 };

@@ -1,22 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { MainSection, MainTitle } from "../Common";
 import ServiceContents from "./ServiceContents";
 import ServiceTabBtn from "./ServiceTabBtn";
 
-const MainServiceContainer = styled.div`
+const MainServiceContainer = styled(MainSection)`
   overflow: hidden;
-  position: relative;
-  padding: 150px 0;
 `;
 
-const MainTitle = styled.div`
-  width: 100%;
+const CustomMainTitle = styled(MainTitle)`
   min-width: 1210px;
-  font-family: Pretendard;
-  text-align: center;
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 45px;
 `;
 
 const Span = styled.span`
@@ -36,12 +29,12 @@ const MainService: React.FC = () => {
   const [selectedIdx, setSelectedIdx] = useState(0);
 
   return (
-    <MainServiceContainer className="main_section main_service">
-      <MainTitle className="main_title">
+    <MainServiceContainer className="main_service">
+      <CustomMainTitle>
         <Span>Service Introduction</Span>
         <br />
         서비스소개
-      </MainTitle>
+      </CustomMainTitle>
       <ServiceTabBox className="service_tabbox">
         <ServiceTabBtn selectedIdx={selectedIdx} onClickLi={setSelectedIdx} />
         <ServiceContents selectedIdx={selectedIdx} />
