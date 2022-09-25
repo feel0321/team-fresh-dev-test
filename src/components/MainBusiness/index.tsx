@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { MainSection, MainTitle } from "../Common";
 import BusinessContents from "./BusinessContents";
+import MovieContent from "./MovieContent";
 
 const MainBusinessContainer = styled(MainSection)`
   min-width: 1210px;
@@ -34,6 +35,7 @@ const MainBusiness: React.FC = () => {
         신선상품의 유통과정
       </CustomMainTitle>
       <BusinessContents />
+      <MovieContent />
     </MainBusinessContainer>
   );
 };
