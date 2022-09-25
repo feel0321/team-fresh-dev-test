@@ -72,20 +72,23 @@ const A = styled.a`
 
 interface ContainerProps {
   searchResult: SearchResultInterface;
+  onCompleteSearch: (possible: boolean) => void;
 }
 
-const Container: React.FC<ContainerProps> = ({ searchResult }) => {
+const Container: React.FC<ContainerProps> = ({
+  searchResult,
+  onCompleteSearch,
+}) => {
   const { zoneCode, roadAddress } = searchResult;
 
   const handleSubmit = async (): Promise<void> => {
     const data = await postAbleDelivery(roadAddress);
     if (data !== undefined) {
-      console.log(data);
       const isOk = data.result.delyverResult === "배송가능";
       if (isOk) {
-        console.log("가능");
+        onCompleteSearch(true);
       } else {
-        console.log("불가");
+        onCompleteSearch(false);
       }
     }
   };

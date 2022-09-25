@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import DaumPostcodeEmbed from "react-daum-postcode";
 import type { Address } from "react-daum-postcode";
 import SearchLocation from "../../components/SearchLocation";
-import type { SearchResultInterface } from "../../types/page";
+import type { ModalInterface, SearchResultInterface } from "../../types/page";
+import SearchLocationModal from "../../components/SearchLocationModal";
 
 const SearchLocationPage: React.FC = () => {
   const [isDone, setIsDone] = useState(false);
@@ -10,6 +11,11 @@ const SearchLocationPage: React.FC = () => {
     zoneCode: "",
     roadAddress: "",
   });
+  const [modalInfo, setModalInfo] = useState<ModalInterface>({
+    visible: true,
+    possibleDelivery: true,
+  });
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleComplete = (data: Address): void => {
@@ -19,6 +25,17 @@ const SearchLocationPage: React.FC = () => {
     });
     setIsDone(true);
   };
+
+  const handleOpenModal = (possible: boolean): void => {
+    setModalInfo((prevModalInfo) => ({
+      visible: true,
+      possibleDelivery: possible,
+    }));
+  };
+
+  const handleCloseModal = useCallback(() => {
+    setModalInfo((prevModalInfo) => ({ ...prevModalInfo, visible: false }));
+  }, []);
 
   useEffect(() => {
     if (containerRef.current !== null) {
@@ -32,7 +49,20 @@ const SearchLocationPage: React.FC = () => {
   return (
     <div ref={containerRef}>
       <DaumPostcodeEmbed onComplete={handleComplete} />
-      {isDone && <SearchLocation searchResult={searchResult} />}
+      {isDone && (
+        <>
+          <SearchLocation
+            searchResult={searchResult}
+            onCompleteSearch={handleOpenModal}
+          />
+          {modalInfo.visible && (
+            <SearchLocationModal
+              modalInfo={modalInfo}
+              onClose={handleCloseModal}
+            />
+          )}
+        </>
+      )}
     </div>
   );
 };

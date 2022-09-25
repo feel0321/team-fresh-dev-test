@@ -16,3 +16,8 @@ export interface SearchResultInterface {
   zoneCode: string;
   roadAddress: string;
 }
+
+export interface ModalInterface {
+  visible: boolean;
+  possibleDelivery: boolean;
+}
