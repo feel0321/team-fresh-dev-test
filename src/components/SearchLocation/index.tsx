@@ -63,12 +63,12 @@ const Hr = styled.hr`
 
 interface SearchLocationProps {
   searchResult: SearchResultInterface;
-  onCompleteSearch: (possible: boolean) => void;
+  onSubmit: () => Promise<void>;
 }
 
 const SearchLocation: React.FC<SearchLocationProps> = ({
   searchResult,
-  onCompleteSearch,
+  onSubmit,
 }) => {
   return (
     <Wrapper className="wrapper">
@@ -84,10 +84,7 @@ const SearchLocation: React.FC<SearchLocationProps> = ({
         <H4>다시 주소 검색하기</H4>
         <Hr />
       </Header>
-      <Container
-        searchResult={searchResult}
-        onCompleteSearch={onCompleteSearch}
-      />
+      <Container searchResult={searchResult} onSubmit={onSubmit} />
       <Notice />
     </Wrapper>
   );

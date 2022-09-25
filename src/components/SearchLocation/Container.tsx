@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { SearchResultInterface } from "../../types/page";
-import { postAbleDelivery } from "../../api";
 
 const ContainerDiv = styled.div`
   width: 420px;
@@ -72,26 +71,11 @@ const A = styled.a`
 
 interface ContainerProps {
   searchResult: SearchResultInterface;
-  onCompleteSearch: (possible: boolean) => void;
+  onSubmit: () => Promise<void>;
 }
 
-const Container: React.FC<ContainerProps> = ({
-  searchResult,
-  onCompleteSearch,
-}) => {
+const Container: React.FC<ContainerProps> = ({ searchResult, onSubmit }) => {
   const { zoneCode, roadAddress } = searchResult;
-
-  const handleSubmit = async (): Promise<void> => {
-    const data = await postAbleDelivery(roadAddress);
-    if (data !== undefined) {
-      const isOk = data.result.delyverResult === "배송가능";
-      if (isOk) {
-        onCompleteSearch(true);
-      } else {
-        onCompleteSearch(false);
-      }
-    }
-  };
 
   return (
     <ContainerDiv className="container">
@@ -111,7 +95,7 @@ const Container: React.FC<ContainerProps> = ({
       />
       <Input placeholder="나머지 주소를 입력해주세요." />
       <br />
-      <A className="center" onClick={() => handleSubmit()}>
+      <A className="center" onClick={() => onSubmit()}>
         주소입력
       </A>
     </ContainerDiv>
