@@ -12,7 +12,17 @@ const BackDrop = styled.div`
   bottom: 0;
   background-color: #02204a;
   opacity: 0.7;
-  transition: opacity 0.15s linear;
+
+  animation: backdrop 0.15s linear;
+
+  @keyframes backdrop {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.7;
+    }
+  }
 `;
 
 const Modal = styled.div`
@@ -24,10 +34,15 @@ const Modal = styled.div`
   right: 0;
   bottom: 0;
   margin: auto;
-
   pointer-events: none;
-  transform: none;
-  transition: transform 0.3s ease-out;
+
+  animation: modal 0.3s ease-out;
+
+  @keyframes modal {
+    from {
+      transform: translateY(-50px);
+    }
+  }
 
   @media (min-width: 576px) {
     margin: 1.75rem auto;
